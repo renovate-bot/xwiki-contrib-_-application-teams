@@ -34,7 +34,7 @@
   <name>Teams Application</name>
   <description>Various tools and helpers for teams of people</description>
   <packaging>xar</packaging>
-  <version>1.0.2</version>
+  <version>1.0.3-SNAPSHOT</version>
   <properties>
     <!-- Don't run CLIRR here since there's no Java code. -->
     <xwiki.clirr.skip>true</xwiki.clirr.skip>
@@ -57,7 +57,7 @@
     <connection>scm:git:git://github.com/xwiki-contrib/application-teams.git</connection>
     <developerConnection>scm:git:git@github.com:xwiki-contrib/application-teams.git</developerConnection>
     <url>https://github.com/xwiki-contrib/application-teams</url>
-    <tag>application-teams-1.0.2</tag>
+    <tag>HEAD</tag>
   </scm>
   <issueManagement>
     <system>jira</system>
