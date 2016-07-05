@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ * See the NOTICE file distributed with this work for additional
+ * information regarding copyright ownership.
+ *
+ * This is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 2.1 of
+ * the License, or (at your option) any later version.
+ *
+ * This software is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this software; if not, write to the Free
+ * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+ * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
+-->
+
+<xwikidoc version="1.2" reference="Teams.Code.MeetingSheet" locale="">
+  <web>Teams.Code</web>
+  <name>MeetingSheet</name>
+  <language/>
+  <defaultLanguage/>
+  <translation>0</translation>
+  <creator>xwiki:XWiki.Admin</creator>
+  <creationDate>1436255442000</creationDate>
+  <parent>ADMCode.MeetingClass</parent>
+  <author>xwiki:XWiki.Admin</author>
+  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
+  <date>1467731782000</date>
+  <contentUpdateDate>1467731782000</contentUpdateDate>
+  <version>1.1</version>
+  <title>$services.localization.render('teams.meeting.title', [$datetool.format('dd MMMM yyyy', $doc.getValue('date'), $services.localization.toLocale('fr_FR'))])</title>
+  <comment/>
+  <minorEdit>false</minorEdit>
+  <syntaxId>xwiki/2.1</syntaxId>
+  <hidden>false</hidden>
+  <content>{{box cssClass="floatinginfobox"}}{{toc/}}{{/box}}
+
+{{velocity output="false"}}
+#set ($discard = $services.localization.use('document', 'Teams.Code.Translations'))
+#set($xobject = $doc.getObject('Teams.Code.MeetingClass'))
+#set($xclass = $xobject.xWikiClass)
+
+#if ($request.date)
+  $xobject.set('date', $request.date)
+#end
+{{/velocity}}
+
+{{velocity}}
+  #if ($xcontext.action == 'edit')
+    ; $doc.displayPrettyName('date')
+    : $doc.display('date')
+  #end
+
+  = $doc.displayPrettyName('agenda')
+
+  $doc.agenda
+  #if ($xcontext.action == 'edit')
+    ; $doc.displayPrettyName('participants')
+    : $doc.participants
+    ; $doc.displayPrettyName('absents')
+    : $doc.absents
+  #else
+    #if ($doc.getValue('participants') &amp;&amp; !$doc.getValue('participants').isEmpty())
+      = $doc.displayPrettyName('participants')
+
+      $doc.participants
+    #end
+    #if ($doc.getValue('absents') &amp;&amp; !$doc.getValue('absents').isEmpty())
+      = $doc.displayPrettyName('absents')
+
+      $doc.absents
+    #end
+  #end
+
+  = $doc.displayPrettyName('record')
+
+  $doc.record
+{{/velocity}}</content>
+</xwikidoc>

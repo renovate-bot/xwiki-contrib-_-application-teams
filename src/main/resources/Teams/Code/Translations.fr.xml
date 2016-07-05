@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ * See the NOTICE file distributed with this work for additional
+ * information regarding copyright ownership.
+ *
+ * This is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 2.1 of
+ * the License, or (at your option) any later version.
+ *
+ * This software is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this software; if not, write to the Free
+ * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+ * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
+-->
+
+<xwikidoc version="1.2" reference="Teams.Code.Translations" locale="">
+  <web>Teams.Code</web>
+  <name>Translations</name>
+  <language>fr</language>
+  <defaultLanguage>en</defaultLanguage>
+  <translation>1</translation>
+  <creator>xwiki:XWiki.Admin</creator>
+  <creationDate>1436255603000</creationDate>
+  <author>xwiki:XWiki.Admin</author>
+  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
+  <date>1467732582000</date>
+  <contentUpdateDate>1467732582000</contentUpdateDate>
+  <version>1.1</version>
+  <title/>
+  <comment/>
+  <minorEdit>false</minorEdit>
+  <syntaxId>xwiki/2.1</syntaxId>
+  <hidden>false</hidden>
+  <content>teams.home.create.success=L''équipe {0} a été créée
+teams.home.create.alreadyExist=L''équipe {0} existe déjà
+teams.home.teamName=Nom de l'équipe
+teams.home.create=Créer
+teams.table.doc.title=Équipe
+teams.table._actions=Actions
+
+teams.team.sheet.records=Comptes rendus
+teams.team.sheet.recordsLink.label=Page des comptes rendus de réunions
+teams.team.sheet.members=Membres du groupe
+teams.team.sheet.members.editLink=Modifier les membres du groupe
+teams.team.sheet.shifts=Permanences
+teams.team.sheet.email=Adresse email pour communiquer avec le groupe
+
+Teams.Code.TeamClass_content=Divers
+Teams.Code.TeamClass_leader=Responsable
+Teams.Code.TeamClass_email=Email
+Teams.Code.TeamClass_job=Rôle
+Teams.Code.TeamClass_need=Besoins
+Teams.Code.TeamClass_shiftUsers=Membres de permanence
+Teams.Code.TeamClass_shiftCalendar=Calendrier
+
+teams.meeting.table.empty=
+teams.meeting.table.doc.name=Compte rendu
+teams.meeting.table.date=Date
+teams.meeting.table._actions=Actions
+
+teams.meeting.create.title=Compte rendu '{0}
+teams.meeting.pageName=Comptes Rendus
+teams.meeting.title=Compte rendu du {0}
+
+Teams.Code.MeetingClass_date=Date
+Teams.Code.MeetingClass_agenda=Ordre du jour
+Teams.Code.MeetingClass_record=Compte rendu
+Teams.Code.MeetingClass_participants=Présents
+Teams.Code.MeetingClass_absents=Absents
+
+teams.shift.scheduler.event.pageName=Permanence-{0}-{1}
+teams.shift.scheduler.event.title=Permanence - {0}
+teams.shift.scheduler.mail.content=C''est le tour de {0}.
+teams.shift.scheduler.mail.disclaimer=Ceci est un mail automatique configurable sur {0}</content>
+  <object>
+    <name>Teams.Code.Translations</name>
+    <number>0</number>
+    <className>XWiki.TranslationDocumentClass</className>
+    <guid>b421ddcb-1223-4938-868a-4bcb1524994c</guid>
+    <class>
+      <name>XWiki.TranslationDocumentClass</name>
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
+      <scope>
+        <cache>0</cache>
+        <disabled>0</disabled>
+        <displayType>select</displayType>
+        <multiSelect>0</multiSelect>
+        <name>scope</name>
+        <number>1</number>
+        <prettyName>Scope</prettyName>
+        <relationalStorage>0</relationalStorage>
+        <separator> </separator>
+        <separators> ,|</separators>
+        <size>1</size>
+        <unmodifiable>0</unmodifiable>
+        <values>GLOBAL|WIKI|USER|ON_DEMAND</values>
+        <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+      </scope>
+    </class>
+    <property>
+      <scope>WIKI</scope>
+    </property>
+  </object>
+</xwikidoc>
