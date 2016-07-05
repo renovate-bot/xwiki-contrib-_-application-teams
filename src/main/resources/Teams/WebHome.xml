@@ -178,7 +178,7 @@
     <property>
       <parameters>label=$services.localization.render('teams.name')
 target=Teams.WebHome
-icon=icon:application</parameters>
+icon=icon:group</parameters>
     </property>
     <property>
       <scope>wiki</scope>
