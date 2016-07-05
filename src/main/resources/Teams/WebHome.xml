@@ -31,8 +31,8 @@
   <parent>Main.WebHome</parent>
   <author>xwiki:XWiki.Admin</author>
   <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
-  <date>1467743328000</date>
-  <contentUpdateDate>1467743328000</contentUpdateDate>
+  <date>1467746412000</date>
+  <contentUpdateDate>1467746412000</contentUpdateDate>
   <version>1.1</version>
   <title>$services.localization.render('teams.name')</title>
   <comment/>
@@ -44,7 +44,7 @@
   #set($teamName = $request.teamName)
   #set($teamDocument = $xwiki.getDocument($services.model.createSpaceReference($teamName, $doc.documentReference.parent)))
   #if ($teamDocument.isNew())
-    #set($groupName = "Group${teamName.replace(' ', '')}")
+    #set($groupName = "Team${teamName.replace(' ', '')}")
     #set($groupDocument = $xwiki.getDocument($services.model.createDocumentReference($xcontext.database, 'XWiki', $groupName)))
     #if ($groupDocument.isNew())
       #set($void = $groupDocument.newObject('XWiki.XWikiGroups'))
