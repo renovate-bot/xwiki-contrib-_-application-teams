@@ -39,7 +39,9 @@
   <minorEdit>false</minorEdit>
   <syntaxId>xwiki/2.1</syntaxId>
   <hidden>true</hidden>
-  <content>teams.home.create.success=The team {0} has been created
+  <content>teams.name=Teams
+
+teams.home.create.success=The team {0} has been created
 teams.home.create.alreadyExist=The team {0} already exist
 teams.home.teamName=Team name
 teams.home.create=CReate
