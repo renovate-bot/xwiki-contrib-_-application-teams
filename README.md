@@ -11,4 +11,4 @@ Various tools and helpers for teams of people.
 * License: LGPL 2.1
 * Translations: N/A
 * Sonar Dashboard: N/A
-* Continuous Integration Status: [![Build Status](http://ci.xwiki.org/buildStatus/icon?job=Contrib%20-%20Teams%20Application)](http://ci.xwiki.org/job/Contrib%20-%20Teams%20Application/)
+* Continuous Integration Status: [![Build Status](http://ci.xwiki.org/job/XWiki%20Contrib/job/application-teams/job/master/badge/icon)](http://ci.xwiki.org/job/XWiki%20Contrib/job/application-teams/job/master/)
