@@ -31,7 +31,7 @@
   <parent>Scheduler.WebHome</parent>
   <author>xwiki:XWiki.Admin</author>
   <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
-  <date>1487581236000</date>
+  <date>1574177722000</date>
   <contentUpdateDate>1467732510000</contentUpdateDate>
   <version>1.1</version>
   <title>WeeklyShifts</title>
@@ -170,7 +170,7 @@ import org.xwiki.model.reference.*;
 import java.text.*;
 
 def newEvent(userReference) {
-  eventReference = new DocumentReference(services.localization.render('teams.shift.scheduler.event.pageName', [currentweekMonday.format(formatter), currentweekFriday.format(formatter)]), calendarDocument.documentReference.parent)
+  eventReference = new DocumentReference('WebHome', new SpaceReference(services.localization.render('teams.shift.scheduler.event.pageName', [currentweekMonday.format(formatter), currentweekFriday.format(formatter)]), calendarDocument.documentReference.parent))
   currentWeekEvent = xwiki.getDocument(eventReference)
   currentWeekEventXDocument = currentWeekEvent.doc
 
@@ -187,6 +187,7 @@ def newEvent(userReference) {
     currentWeekEventObject.set('startDate', Date.from(currentweekMonday.atStartOfDay().atZone(ZoneId.systemDefault()).toInstant()))
     currentWeekEventObject.set('endDate', Date.from(currentweekFriday.atStartOfDay().atZone(ZoneId.systemDefault()).toInstant()))
     currentWeekEventObject.set('allDay', 1)
+    currentWeekEventObject.set('recurrent', 1)
 
     currentWeekEventXDocument.setParentReference(calendarDocument.documentReference)
 
@@ -194,6 +195,7 @@ def newEvent(userReference) {
     xwiki.getXWiki().saveDocument(currentWeekEventXDocument, context)
   } else if (currentWeekEventXDocument.isContentDirty()) {
     // Save event
+    xwiki.getXWiki().saveDocument(currentWeekEventXDocument, context)
     xwiki.getXWiki().saveDocument(currentWeekEventXDocument, context)
   }
 
@@ -229,7 +231,7 @@ for (team in teams) {
     calendar = teamDocument.getValue('shiftCalendar')
     if (calendar) {
       calendarDocument = xwiki.getDocument(calendar)
-      eventReference = new DocumentReference('Permanence-' + lastweekMonday.format(formatter) + '-' + lastweekFriday.format(formatter), calendarDocument.documentReference.parent)
+      eventReference = new DocumentReference('WebHome', new SpaceReference(services.localization.render('teams.shift.scheduler.event.pageName', [lastweekMonday.format(formatter), lastweekFriday.format(formatter)]), calendarDocument.documentReference.parent))
       lastWeekEvent = xwiki.getDocument(eventReference)
 
       currentUserIndex = 0
