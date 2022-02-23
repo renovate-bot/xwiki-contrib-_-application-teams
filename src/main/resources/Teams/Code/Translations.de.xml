@@ -1,0 +1,79 @@
+<?xml version="1.1" encoding="UTF-8"?>
+
+<!--
+ * See the NOTICE file distributed with this work for additional
+ * information regarding copyright ownership.
+ *
+ * This is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 2.1 of
+ * the License, or (at your option) any later version.
+ *
+ * This software is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this software; if not, write to the Free
+ * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+ * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
+-->
+
+<xwikidoc version="1.2" reference="Teams.Code.Translations" locale="de">
+  <web>Teams.Code</web>
+  <name>Translations</name>
+  <language>de</language>
+  <defaultLanguage>en</defaultLanguage>
+  <translation>1</translation>
+  <creator>xwiki:XWiki.Admin</creator>
+  <creationDate>1436255603000</creationDate>
+  <parent>WebHome</parent>
+  <author>xwiki:XWiki.Admin</author>
+  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
+  <date>1467732582000</date>
+  <contentUpdateDate>1467732582000</contentUpdateDate>
+  <version>1.1</version>
+  <title/>
+  <comment/>
+  <minorEdit>false</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>true</hidden>
+  <content>teams.name=Teams
+teams.home.create.success=Das Team {0} wurde erstellt
+teams.home.create.alreadyExist=Das Team {0} existiert bereits
+teams.home.teamName=Team-Name
+teams.home.create=Erstellen
+teams.table.doc.title=Team
+teams.table._actions=Aktionen
+teams.team.sheet.records=Besprechungsaufzeichnungen
+teams.team.sheet.recordsLink.label=Seite Besprechungsaufzeichnungen
+teams.team.sheet.members=Teammitglieder
+teams.team.sheet.members.editLink=Teammitglieder ändern
+teams.team.sheet.shifts=Beständigkeiten
+teams.team.sheet.email=E-Mail-Adresse zur Kommunikation mit dem Team
+Teams.Code.TeamClass_content=Verschiedenes
+Teams.Code.TeamClass_leader=Leiter
+Teams.Code.TeamClass_email=E-Mail
+Teams.Code.TeamClass_job=Job
+Teams.Code.TeamClass_need=Bedürfnisse
+Teams.Code.TeamClass_shiftUsers=Schichtmitglieder
+Teams.Code.TeamClass_shiftCalendar=Kalender
+### Missing: teams.meeting.table.empty=
+teams.meeting.table.doc.name=Besprechungsaufzeichnung
+teams.meeting.table.date=Datum
+teams.meeting.table._actions=Aktionen
+teams.meeting.create.title=Besprechungsaufzeichnung ''{0}
+teams.meeting.pageName=Besprechungsaufzeichnungen
+teams.meeting.title=Besprechungsaufzeichnung für {0}
+Teams.Code.MeetingClass_date=Datum
+Teams.Code.MeetingClass_agenda=Tagesordnung
+Teams.Code.MeetingClass_record=Aufzeichnung
+Teams.Code.MeetingClass_participants=Teilnehmer
+Teams.Code.MeetingClass_absents=Abwesend
+teams.shift.scheduler.event.pageName=Dienst-{0}-{1}
+teams.shift.scheduler.event.title=Dienst - {0}
+teams.shift.scheduler.mail.content={0} ist an der Reihe.
+teams.shift.scheduler.mail.disclaimer=Dies ist eine automatisch generierte E-Mail, die mit {0} konfiguriert werden kann
+</content>
+  </xwikidoc>
