@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.1" encoding="UTF-8"?>
 
 <!--
  * See the NOTICE file distributed with this work for additional
@@ -27,12 +27,9 @@
   <defaultLanguage/>
   <translation>0</translation>
   <creator>xwiki:XWiki.Admin</creator>
-  <creationDate>1435857188000</creationDate>
   <parent>ADMCode.GroupClass</parent>
   <author>xwiki:XWiki.Admin</author>
   <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
-  <date>1567786566000</date>
-  <contentUpdateDate>1567786566000</contentUpdateDate>
   <version>1.1</version>
   <title>#if($doc.documentReference.name == 'TeamSheet')Team Sheet#{else}$doc.title#end</title>
   <comment/>
@@ -42,6 +39,11 @@
   <content>{{box cssClass="floatinginfobox"}}{{toc/}}{{/box}}
 
 {{velocity}}
+#set($class = $doc.getObject('Teams.Code.TeamClass').xWikiClass)
+= $doc.displayPrettyName('news', false, false)
+
+$doc.news
+
 #set($class = $doc.getObject('Teams.Code.TeamClass').xWikiClass)
 = $doc.displayPrettyName('job', false, false)
 
@@ -53,14 +55,14 @@ $doc.job
 = $doc.displayPrettyName('leader', false, false)
 
 $doc.leader
-
 #if ($xcontext.action != 'view' || "$!{doc.getValue('content')}" != '')
+
 = $doc.displayPrettyName('content', false, false)
 
 $doc.get('content')
 #end
-
 #if ($xcontext.action == 'view')
+
 = $services.localization.render('teams.team.sheet.records')
 
 #if ("$!{doc.getValue('records')}" != '')
@@ -68,25 +70,38 @@ $doc.get('content')
 #else
   [[$services.localization.render('teams.team.sheet.recordsLink.label')&gt;&gt;.${services.localization.render('teams.meeting.pageName')}.WebHome]]
 #end
+#set($groupName = $doc.getValue('group'))
+#if ("$!groupName" != '')
 
 = $services.localization.render('teams.team.sheet.members')
-
-#set($groupName = $doc.getValue('group'))
 
 {{display reference="$groupName"/}}
 
 [[$services.localization.render('teams.team.sheet.members.editLink')&gt;&gt;path:$xwiki.getURL($groupName, 'edit', "xredirect=$escapetool.url($xwiki.relativeRequestURL)")]]
 #end
+#end
 
-= $services.localization.render('teams.team.sheet.shifts')
+#if ($xcontext.action == 'view')
+#if ("$!{doc.getValue('shiftUsers')}" != '')
+  = $services.localization.render('teams.team.sheet.shifts')
 
-; $doc.displayPrettyName('shiftUsers', false, false):
-: $doc.shiftUsers
-; $doc.displayPrettyName('shiftCalendar', false, false):
+  ; $doc.displayPrettyName('shiftUsers', false, false):
+  : $doc.shiftUsers
+#end
+#else
+  = $services.localization.render('teams.team.sheet.shifts')
+
+  ; $doc.displayPrettyName('shiftUsers', false, false):
+  : $doc.shiftUsers
+#end
 #if ($xcontext.action == 'view')
   #set($shiftCalendar = $doc.getValue('shiftCalendar'))
-  : #if($shiftCalendar &amp;&amp; $shiftCalendar != 'MoccaCalendar.MoccaCalendarTemplate')[[$shiftCalendar]]#end
+  #if("$!shiftCalendar" != '' &amp;&amp; $shiftCalendar != 'MoccaCalendar.MoccaCalendarTemplate')
+    ; $doc.displayPrettyName('shiftCalendar', false, false):
+    : [[$shiftCalendar]]
+  #end
 #else
+  ; $doc.displayPrettyName('shiftCalendar', false, false):
   : $doc.shiftCalendar
 #end
 

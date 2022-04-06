@@ -27,12 +27,9 @@
   <defaultLanguage>en</defaultLanguage>
   <translation>0</translation>
   <creator>xwiki:XWiki.Admin</creator>
-  <creationDate>1436255603000</creationDate>
   <parent>WebHome</parent>
   <author>xwiki:XWiki.Admin</author>
   <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
-  <date>1467732582000</date>
-  <contentUpdateDate>1467732582000</contentUpdateDate>
   <version>1.1</version>
   <title/>
   <comment/>
@@ -56,6 +53,7 @@ teams.team.sheet.shifts=Permanences
 teams.team.sheet.email=Email address to use to communicate with the team
 
 Teams.Code.TeamClass_content=Miscelaneous
+Teams.Code.TeamClass_news=News
 Teams.Code.TeamClass_leader=Leader
 Teams.Code.TeamClass_email=Email
 Teams.Code.TeamClass_job=Job

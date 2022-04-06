@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.1" encoding="UTF-8"?>
 
 <!--
  * See the NOTICE file distributed with this work for additional
@@ -27,12 +27,9 @@
   <defaultLanguage/>
   <translation>0</translation>
   <creator>xwiki:XWiki.Admin</creator>
-  <creationDate>1465975854000</creationDate>
   <parent>Scheduler.WebHome</parent>
   <author>xwiki:XWiki.Admin</author>
   <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
-  <date>1574177722000</date>
-  <contentUpdateDate>1467732510000</contentUpdateDate>
   <version>1.1</version>
   <title>WeeklyShifts</title>
   <comment/>
@@ -163,130 +160,131 @@
       <jobName>Weekly Shifts</jobName>
     </property>
     <property>
-      <script>import java.time.*;
-import java.time.temporal.*;
-import java.time.format.*;
-import org.xwiki.model.reference.*;
-import java.text.*;
+      <script>    import java.time.*;
+    import java.time.temporal.*;
+    import java.time.format.*;
+    import org.xwiki.model.reference.*;
+    import java.text.*;
 
-def newEvent(userReference) {
-  eventReference = new DocumentReference('WebHome', new SpaceReference(services.localization.render('teams.shift.scheduler.event.pageName', [currentweekMonday.format(formatter), currentweekFriday.format(formatter)]), calendarDocument.documentReference.parent))
-  currentWeekEvent = xwiki.getDocument(eventReference)
-  currentWeekEventXDocument = currentWeekEvent.doc
+    def newEvent(userReference) {
+      eventReference = new DocumentReference('WebHome', new SpaceReference(services.localization.render('teams.shift.scheduler.event.pageName', [currentweekMonday.format(formatter), currentweekFriday.format(formatter)]), calendarDocument.documentReference.parent))
+      currentWeekEvent = xwiki.getDocument(eventReference)
+      currentWeekEventXDocument = currentWeekEvent.doc
 
-  currentWeekEvent.setTitle(services.localization.render('teams.shift.scheduler.event.title', [xwiki.getPlainUserName(userReference)]))
-  currentWeekEventXDocument.setCreatorReference(userReference)
-  currentWeekEventXDocument.setAuthorReference(userReference)
-  currentWeekEventXDocument.setContentAuthorReference(userReference)
+      currentWeekEvent.setTitle(services.localization.render('teams.shift.scheduler.event.title', [xwiki.getPlainUserName(userReference)]))
+      currentWeekEventXDocument.setCreatorReference(userReference)
+      currentWeekEventXDocument.setAuthorReference(userReference)
+      currentWeekEventXDocument.setContentAuthorReference(userReference)
 
-  // Remember event
-  events.add(currentWeekEvent)
+      // Remember event
+      events.add(currentWeekEvent)
 
-  if (currentWeekEvent.isNew()) {
-    currentWeekEventObject = currentWeekEvent.newObject('MoccaCalendar.MoccaCalendarEventClass')
-    currentWeekEventObject.set('startDate', Date.from(currentweekMonday.atStartOfDay().atZone(ZoneId.systemDefault()).toInstant()))
-    currentWeekEventObject.set('endDate', Date.from(currentweekFriday.atStartOfDay().atZone(ZoneId.systemDefault()).toInstant()))
-    currentWeekEventObject.set('allDay', 1)
-    currentWeekEventObject.set('recurrent', 1)
+      if (currentWeekEvent.isNew()) {
+        currentWeekEventObject = currentWeekEvent.newObject('MoccaCalendar.MoccaCalendarEventClass')
+        currentWeekEventObject.set('startDate', Date.from(currentweekMonday.atStartOfDay().atZone(ZoneId.systemDefault()).toInstant()))
+        currentWeekEventObject.set('endDate', Date.from(currentweekFriday.atStartOfDay().atZone(ZoneId.systemDefault()).toInstant()))
+        currentWeekEventObject.set('allDay', 1)
+        currentWeekEventObject.set('recurrent', 0)
 
-    currentWeekEventXDocument.setParentReference(calendarDocument.documentReference)
+        currentWeekEventXDocument.setParentReference(calendarDocument.documentReference)
 
-    // Save event
-    xwiki.getXWiki().saveDocument(currentWeekEventXDocument, context)
-  } else if (currentWeekEventXDocument.isContentDirty()) {
-    // Save event
-    xwiki.getXWiki().saveDocument(currentWeekEventXDocument, context)
-    xwiki.getXWiki().saveDocument(currentWeekEventXDocument, context)
-  }
+        // Save event
+        xwiki.getXWiki().saveDocument(currentWeekEventXDocument, context)
+      } else if (currentWeekEventXDocument.isContentDirty()) {
+        // Save event
+        xwiki.getXWiki().saveDocument(currentWeekEventXDocument, context)
+      }
 
-  currentweekMonday = currentweekMonday.plusWeeks(1)
-  currentweekFriday = currentweekMonday.with(DayOfWeek.FRIDAY);
-}
+      currentweekMonday = currentweekMonday.plusWeeks(1)
+      currentweekFriday = currentweekMonday.with(DayOfWeek.FRIDAY);
+    }
 
-// Search last week dates
-now = LocalDate.now()
-currentweekMonday = now.with(DayOfWeek.MONDAY);
-currentweekFriday = now.with(DayOfWeek.FRIDAY);
-lastweek = now.minusWeeks(1)
-lastweekMonday = lastweek.with(DayOfWeek.MONDAY);
-lastweekFriday = lastweek.with(DayOfWeek.FRIDAY);
+    // Search last week dates
+    now = LocalDate.now()
+    currentweekMonday = now.with(DayOfWeek.MONDAY);
+    currentweekFriday = now.with(DayOfWeek.FRIDAY);
+    lastweek = now.minusWeeks(1)
+    lastweekMonday = lastweek.with(DayOfWeek.MONDAY);
+    lastweekFriday = lastweek.with(DayOfWeek.FRIDAY);
 
-// Utils
-formatter = DateTimeFormatter.ofPattern('yyyyMMdd');
-dateFormat = new SimpleDateFormat('dd MMMM', services.localization.currentLocale);
+    // Utils
+    formatter = DateTimeFormatter.ofPattern('yyyyMMdd');
+    dateFormat = new SimpleDateFormat('dd MMMM', services.localization.currentLocale);
 
-// Search teams
-teams = services.query.xwql("from doc.object(Teams.Code.TeamClass) as team").execute()
-for (team in teams) {
-  // Get team document
-  teamDocument = xwiki.getDocument(team)
+    // Search teams
+    teams = services.query.xwql("from doc.object(Teams.Code.TeamClass) as team").execute()
+    for (team in teams) {
+      // Get team document
+      teamDocument = xwiki.getDocument(team)
 
-  // Get member of the team who are part of the service list
-  users = com.xpn.xwiki.objects.classes.UsersClass.getListFromString(teamDocument.getValue('shiftUsers'));
+      // Get member of the team who are part of the service list
+      users = com.xpn.xwiki.objects.classes.UsersClass.getListFromString(teamDocument.getValue('shiftUsers'));
 
-  // If there is any user registered, service handling is enabled
-  if (!users.isEmpty()) {
-    events = []
+      // If there is any user registered, service handling is enabled
+      if (!users.isEmpty()) {
+        events = []
 
-    calendar = teamDocument.getValue('shiftCalendar')
-    if (calendar) {
-      calendarDocument = xwiki.getDocument(calendar)
-      eventReference = new DocumentReference('WebHome', new SpaceReference(services.localization.render('teams.shift.scheduler.event.pageName', [lastweekMonday.format(formatter), lastweekFriday.format(formatter)]), calendarDocument.documentReference.parent))
-      lastWeekEvent = xwiki.getDocument(eventReference)
+        calendar = teamDocument.getValue('shiftCalendar')
+        if (calendar) {
+          calendarDocument = xwiki.getDocument(calendar)
+          eventReference = new DocumentReference('WebHome', new SpaceReference(services.localization.render('teams.shift.scheduler.event.pageName', [lastweekMonday.format(formatter), lastweekFriday.format(formatter)]), calendarDocument.documentReference.parent))
+          lastWeekEvent = xwiki.getDocument(eventReference)
 
-      currentUserIndex = 0
-      if (!lastWeekEvent.isNew()) {
-        // Current user is last week user plus 1 in the list
-        currentUserIndex = users.indexOf(lastWeekEvent.creator)
-        if (currentUserIndex != -1) {
-          ++currentUserIndex
-          if (currentUserIndex == users.size()) {
-            currentUserIndex = 0
+          currentUserIndex = 0
+          if (!lastWeekEvent.isNew()) {
+            // Current user is last week user plus 1 in the list
+            currentUserIndex = users.indexOf(lastWeekEvent.creator)
+            if (currentUserIndex != -1) {
+              ++currentUserIndex
+              if (currentUserIndex == users.size()) {
+                currentUserIndex = 0
+              }
+            } else {
+              currentUserIndex = 0
+            }
+          }
+
+          // Create missing events
+
+          for (int i = currentUserIndex; i &lt; users.size(); ++i) {
+            user = users.get(i)
+            newEvent(services.model.resolveDocument(user))
+          }
+
+          for (int i = 0; i &lt; currentUserIndex; ++i) {
+            user = users.get(i)
+            newEvent(services.model.resolveDocument(user))
+          }
+        }
+
+        if (!events.isEmpty()) {
+          teamMail = teamDocument.getValue('email')
+          if (teamMail &amp;&amp; teamMail != '') {
+            mailSubject = 'Permanence ' + dateFormat.format(events.get(0).getValue('startDate')) + ' -&gt; ' + dateFormat.format(events.get(0).getValue('endDate'))
+
+            mailContent = services.localization.render('teams.shift.scheduler.mail.content', [xwiki.getPlainUserName(events.get(0).creatorReference)])
+            mailContent += "\n\n"
+            mailContent += events.get(0).description
+            mailContent += "\n\n"
+
+            for (int i = 1; i &lt; events.size() ; ++i) {
+              if (i &gt; 1) {
+                mailContent += "\n"
+              }
+              mailContent += '* ' + xwiki.getPlainUserName(events.get(i).creatorReference) + ' (' + dateFormat.format(events.get(i).getValue('startDate')) + ' -&gt; ' + dateFormat.format(events.get(i).getValue('endDate')) + ')'
+            }
+
+            mailContent += "\n\n"
+            mailContent += services.localization.render('teams.shift.scheduler.mail.disclaimer', [teamDocument.externalURL])
+
+            message = services.mailsender.createMessage(teamMail, teamMail, mailSubject)
+            message.addPart('text/plain', mailContent)
+
+            services.mailsender.send(message)
           }
         }
       }
-
-      // Create missing events 
-
-      for (int i = currentUserIndex; i &lt; users.size(); ++i) {
-        user = users.get(i)
-        newEvent(services.model.resolveDocument(user))
-      }
-
-      for (int i = 0; i &lt; currentUserIndex; ++i) {
-        user = users.get(i)
-        newEvent(services.model.resolveDocument(user))
-      }
-    }
-
-    if (!events.isEmpty()) {
-      teamMail = teamDocument.getValue('email')
-      if (teamMail &amp;&amp; teamMail != '') {
-        mailSubject = 'Permanence ' + dateFormat.format(events.get(0).getValue('startDate')) + ' -&gt; ' + dateFormat.format(events.get(0).getValue('endDate'))
-
-        mailContent = services.localization.render('teams.shift.scheduler.mail.content', [xwiki.getPlainUserName(events.get(0).creatorReference)])
-        mailContent += "\n\n"
-        mailContent += events.get(0).description
-        mailContent += "\n\n"
-
-        for (int i = 1; i &lt; events.size() ; ++i) {
-          if (i &gt; 1) {
-            mailContent += "\n"
-          }
-          mailContent += '* ' + xwiki.getPlainUserName(events.get(i).creatorReference) + ' (' + dateFormat.format(events.get(i).getValue('startDate')) + ' -&gt; ' + dateFormat.format(events.get(i).getValue('endDate')) + ')'
-        }
-
-        mailContent += "\n\n"
-        mailContent += services.localization.render('teams.shift.scheduler.mail.disclaimer', [teamDocument.externalURL])
-
-        message = services.mailsender.createMessage(teamMail, teamMail, mailSubject)
-        message.addPart('text/plain', mailContent)
-
-        services.mailsender.send(message)
-      }
-    }
-  }
-}</script>
+    }</script>
     </property>
     <property>
       <status>Normal</status>

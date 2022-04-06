@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.1" encoding="UTF-8"?>
 
 <!--
  * See the NOTICE file distributed with this work for additional
@@ -27,12 +27,9 @@
   <defaultLanguage/>
   <translation>0</translation>
   <creator>xwiki:XWiki.Admin</creator>
-  <creationDate>1436260463000</creationDate>
   <parent>WebHome</parent>
   <author>xwiki:XWiki.Admin</author>
   <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
-  <date>1467731691000</date>
-  <contentUpdateDate>1467731691000</contentUpdateDate>
   <version>1.1</version>
   <title/>
   <comment/>
@@ -50,21 +47,16 @@
 
 {{velocity}}
 #if ($hasEdit)
-  ## A simple date picker widget.
-  #set ($discard = $xwiki.ssfx.use('uicomponents/widgets/datepicker/calendarDateSelect.css', true))
-  #set ($discard = $xwiki.jsfx.use('uicomponents/widgets/datepicker/calendarDateSelect.js',
-    {'forceSkinAction': true, 'language': $xcontext.language}))
-  ## Used to parse and serialize the selected date using the date format specified in the XClass.
-  #set ($discard = $xwiki.jsfx.use('uicomponents/widgets/datepicker/simpleDateFormat.js',
-    {'forceSkinAction': true, 'language': $xcontext.language}))
-  ## A wrapper over the CalendarDateSelect widget that uses the SimpleDateFormat to parse/serialize the dates.
-  #set ($discard = $xwiki.ssfx.use('uicomponents/widgets/datepicker/dateTimePicker.css', true))
-  #set ($discard = $xwiki.jsfx.use('uicomponents/widgets/datepicker/dateTimePicker.js'))
-  #set ($format = 'dd/MM/yyyy HH:mm')
-  #set ($value = $datetool.date)
   {{html}}
     &lt;form&gt;
-      Date:   &lt;input type="text" value="$!escapetool.xml($datetool.format($format, $value))" class="datetime t$!value.time" title="$!escapetool.xml($format)" name="date"/&gt;
+      #dateTimePicker_import
+      #set ($dateTimePickerParams = {
+        'id': 'cr_date',
+        'name': 'date',
+        'value': $datetool.date,
+        'data-format': 'dd/MM/yyyy HH:mm'
+      })
+      Date:   #dateTimePicker_input($dateTimePickerParams)
 
       &lt;input type="submit" value="Nouveau"/&gt;
     &lt;/form&gt;

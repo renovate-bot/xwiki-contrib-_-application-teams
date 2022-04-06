@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.1" encoding="UTF-8"?>
 
 <!--
  * See the NOTICE file distributed with this work for additional
@@ -27,12 +27,9 @@
   <defaultLanguage/>
   <translation>0</translation>
   <creator>xwiki:XWiki.Admin</creator>
-  <creationDate>1467721406000</creationDate>
   <parent>WebHome</parent>
   <author>xwiki:XWiki.Admin</author>
   <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
-  <date>1467727375000</date>
-  <contentUpdateDate>1467721406000</contentUpdateDate>
   <version>1.1</version>
   <title/>
   <comment/>
@@ -50,9 +47,11 @@
     <nameField/>
     <validationScript/>
     <content>
+      <contenttype>---</contenttype>
       <customDisplay/>
       <disabled>0</disabled>
       <editor>---</editor>
+      <hint/>
       <name>content</name>
       <number>4</number>
       <picker>0</picker>
@@ -67,6 +66,7 @@
     <email>
       <customDisplay/>
       <disabled>0</disabled>
+      <hint/>
       <name>email</name>
       <number>9</number>
       <picker>0</picker>
@@ -80,8 +80,12 @@
     <group>
       <cache>0</cache>
       <customDisplay/>
+      <defaultValue/>
       <disabled>0</disabled>
       <displayType>input</displayType>
+      <freeText/>
+      <hint/>
+      <largeStorage>0</largeStorage>
       <multiSelect>0</multiSelect>
       <name>group</name>
       <number>2</number>
@@ -99,9 +103,11 @@
       <classType>com.xpn.xwiki.objects.classes.GroupsClass</classType>
     </group>
     <job>
+      <contenttype>---</contenttype>
       <customDisplay/>
       <disabled>0</disabled>
       <editor>---</editor>
+      <hint/>
       <name>job</name>
       <number>3</number>
       <picker>0</picker>
@@ -116,8 +122,12 @@
     <leader>
       <cache>0</cache>
       <customDisplay/>
+      <defaultValue/>
       <disabled>0</disabled>
       <displayType>input</displayType>
+      <freeText/>
+      <hint/>
+      <largeStorage>0</largeStorage>
       <multiSelect>0</multiSelect>
       <name>leader</name>
       <number>1</number>
@@ -135,9 +145,11 @@
       <classType>com.xpn.xwiki.objects.classes.UsersClass</classType>
     </leader>
     <need>
+      <contenttype>---</contenttype>
       <customDisplay/>
       <disabled>0</disabled>
       <editor>---</editor>
+      <hint/>
       <name>need</name>
       <number>5</number>
       <picker>0</picker>
@@ -149,9 +161,27 @@
       <validationRegExp/>
       <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
     </need>
+    <news>
+      <contenttype>---</contenttype>
+      <customDisplay/>
+      <disabled>0</disabled>
+      <editor>---</editor>
+      <hint/>
+      <name>news</name>
+      <number>10</number>
+      <picker>0</picker>
+      <prettyName>News</prettyName>
+      <rows>10</rows>
+      <size>300</size>
+      <unmodifiable>0</unmodifiable>
+      <validationMessage/>
+      <validationRegExp/>
+      <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
+    </news>
     <records>
       <customDisplay/>
       <disabled>0</disabled>
+      <hint/>
       <name>records</name>
       <number>9</number>
       <picker>0</picker>
@@ -166,9 +196,13 @@
       <cache>0</cache>
       <classname>MoccaCalendar.MoccaCalendarClass</classname>
       <customDisplay/>
+      <defaultValue/>
       <disabled>0</disabled>
       <displayType>select</displayType>
+      <freeText/>
+      <hint/>
       <idField>doc.fullName</idField>
+      <largeStorage>0</largeStorage>
       <multiSelect>0</multiSelect>
       <name>shiftCalendar</name>
       <number>8</number>
@@ -189,8 +223,12 @@
     <shiftUsers>
       <cache>0</cache>
       <customDisplay/>
+      <defaultValue/>
       <disabled>0</disabled>
       <displayType>input</displayType>
+      <freeText/>
+      <hint/>
+      <largeStorage>0</largeStorage>
       <multiSelect>1</multiSelect>
       <name>shiftUsers</name>
       <number>7</number>
@@ -223,17 +261,29 @@
       <nameField/>
       <validationScript/>
       <sheet>
+        <cache>0</cache>
+        <classname/>
         <customDisplay/>
         <disabled>0</disabled>
+        <displayType>input</displayType>
+        <hint/>
+        <idField/>
+        <multiSelect>0</multiSelect>
         <name>sheet</name>
         <number>1</number>
-        <picker>0</picker>
+        <picker>1</picker>
         <prettyName>Sheet</prettyName>
+        <relationalStorage>0</relationalStorage>
+        <separator> </separator>
+        <separators/>
         <size>30</size>
+        <sort>none</sort>
+        <sql/>
         <unmodifiable>0</unmodifiable>
         <validationMessage/>
         <validationRegExp/>
-        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+        <valueField/>
+        <classType>com.xpn.xwiki.objects.classes.PageClass</classType>
       </sheet>
     </class>
     <property>
@@ -255,17 +305,29 @@
       <nameField/>
       <validationScript/>
       <sheet>
+        <cache>0</cache>
+        <classname/>
         <customDisplay/>
         <disabled>0</disabled>
+        <displayType>input</displayType>
+        <hint/>
+        <idField/>
+        <multiSelect>0</multiSelect>
         <name>sheet</name>
         <number>1</number>
-        <picker>0</picker>
+        <picker>1</picker>
         <prettyName>Sheet</prettyName>
+        <relationalStorage>0</relationalStorage>
+        <separator> </separator>
+        <separators/>
         <size>30</size>
+        <sort>none</sort>
+        <sql/>
         <unmodifiable>0</unmodifiable>
         <validationMessage/>
         <validationRegExp/>
-        <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+        <valueField/>
+        <classType>com.xpn.xwiki.objects.classes.PageClass</classType>
       </sheet>
     </class>
     <property>

@@ -25,24 +25,32 @@
   <parent>
     <groupId>org.xwiki.contrib</groupId>
     <artifactId>parent-platform</artifactId>
-    <version>8.4-11</version>
+    <version>11.10</version>
   </parent>
-  <groupId>org.xwiki.contrib</groupId>
   <artifactId>application-teams</artifactId>
   <name>Teams Application</name>
   <description>Various tools and helpers for teams of people</description>
   <packaging>xar</packaging>
   <version>1.1.2-SNAPSHOT</version>
   <properties>
-    <!-- Don't run CLIRR here since there's no Java code. -->
-    <xwiki.clirr.skip>true</xwiki.clirr.skip>
-
     <xwiki.extension.category>application</xwiki.extension.category>
 
     <xwiki.release.jira.skip>false</xwiki.release.jira.skip>
     <xwiki.issueManagement.jira.id>TEAMS</xwiki.issueManagement.jira.id>
   </properties>
   <dependencies>
+    <dependency>
+      <groupId>org.xwiki.platform</groupId>
+      <artifactId>xwiki-platform-oldcore</artifactId>
+      <version>${platform.version}</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.xwiki.platform</groupId>
+      <artifactId>xwiki-platform-rendering-macro-velocity</artifactId>
+      <version>${platform.version}</version>
+      <scope>runtime</scope>
+    </dependency>
     <dependency>
       <groupId>org.xwiki.contrib</groupId>
       <artifactId>application-mocca-calendar-ui</artifactId>
