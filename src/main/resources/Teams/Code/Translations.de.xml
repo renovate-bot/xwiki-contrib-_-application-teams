@@ -1,4 +1,4 @@
-<?xml version="1.1" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <!--
  * See the NOTICE file distributed with this work for additional
@@ -27,12 +27,9 @@
   <defaultLanguage>en</defaultLanguage>
   <translation>1</translation>
   <creator>xwiki:XWiki.Admin</creator>
-  <creationDate>1436255603000</creationDate>
   <parent>WebHome</parent>
   <author>xwiki:XWiki.Admin</author>
   <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
-  <date>1467732582000</date>
-  <contentUpdateDate>1467732582000</contentUpdateDate>
   <version>1.1</version>
   <title/>
   <comment/>
@@ -76,4 +73,4 @@ teams.shift.scheduler.event.title=Dienst - {0}
 teams.shift.scheduler.mail.content={0} ist an der Reihe.
 teams.shift.scheduler.mail.disclaimer=Dies ist eine automatisch generierte E-Mail, die mit {0} konfiguriert werden kann
 </content>
-  </xwikidoc>
+</xwikidoc>
