@@ -67,8 +67,7 @@
 {{velocity}}
 #set ($discard = $services.localization.use('document', 'Teams.Code.Translations'))
 #set ($columnsProperties = {
-  'doc.name': {"type":"text","size":10,"link":"view"},
-  'date': {"type":"text","size":10},
+  'date': {"link":"view", "html":true},
   '_actions': {"sortable":false,"filterable":false,"html":true,"actions":["edit","delete"]}
 })
 #set ($options = {
@@ -81,7 +80,7 @@
   'defaultOrder': 'desc',
   "extraParams" : "&amp;space=${doc.space}"
 })
-#set ($columns = ['doc.name', 'date', '_actions'])
+#set ($columns = ['date', '_actions'])
 #livetable('meetings' $columns $columnsProperties $options)
 {{/velocity}}</content>
 </xwikidoc>
