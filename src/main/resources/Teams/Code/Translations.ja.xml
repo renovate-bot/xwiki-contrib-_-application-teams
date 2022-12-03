@@ -1,1 +1,77 @@
+<?xml version="1.1" encoding="UTF-8"?>
 
+<!--
+ * See the NOTICE file distributed with this work for additional
+ * information regarding copyright ownership.
+ *
+ * This is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 2.1 of
+ * the License, or (at your option) any later version.
+ *
+ * This software is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this software; if not, write to the Free
+ * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+ * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
+-->
+
+<xwikidoc version="1.2" reference="Teams.Code.Translations" locale="ja">
+  <web>Teams.Code</web>
+  <name>Translations</name>
+  <language>ja</language>
+  <defaultLanguage>en</defaultLanguage>
+  <translation>1</translation>
+  <creator>xwiki:XWiki.Admin</creator>
+  <parent>WebHome</parent>
+  <author>xwiki:XWiki.Admin</author>
+  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
+  <version>1.1</version>
+  <title/>
+  <comment/>
+  <minorEdit>false</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>true</hidden>
+  <content>teams.name=チーム
+teams.home.create.success=チーム {0} を作成しました
+teams.home.create.alreadyExist=チーム {0} は既に存在します
+teams.home.teamName=チーム名
+teams.home.create=作成
+teams.table.doc.title=チーム
+teams.table._actions=アクション
+teams.team.sheet.records=ミーティングの記録
+teams.team.sheet.recordsLink.label=ミーティングの記録のページ
+teams.team.sheet.members=チームのメンバー
+teams.team.sheet.members.editLink=チームのメンバーを変更
+teams.team.sheet.shifts=永続
+teams.team.sheet.email=チームと連絡する際に使用するEメールアドレス
+Teams.Code.TeamClass_content=その他
+Teams.Code.TeamClass_news=ニュース
+Teams.Code.TeamClass_leader=リーダー
+Teams.Code.TeamClass_email=Eメール
+Teams.Code.TeamClass_job=仕事
+Teams.Code.TeamClass_need=要求
+Teams.Code.TeamClass_shiftUsers=シフトメンバー
+Teams.Code.TeamClass_shiftCalendar=カレンダー
+### Missing: teams.meeting.table.empty=
+teams.meeting.table.doc.name=ミーティングの記録
+teams.meeting.table.date=日付
+teams.meeting.table._actions=アクション
+teams.meeting.create.title=ミーティングの記録 ''{0}
+teams.meeting.pageName=ミーティングの記録
+teams.meeting.title={0}のミーティングの記録
+Teams.Code.MeetingClass_date=日付
+Teams.Code.MeetingClass_agenda=議題
+Teams.Code.MeetingClass_record=記録
+Teams.Code.MeetingClass_participants=参加者
+Teams.Code.MeetingClass_absents=欠席者
+teams.shift.scheduler.event.pageName=シフト-{0}-{1}
+teams.shift.scheduler.event.title=シフト - {0}
+teams.shift.scheduler.mail.content={0}の順番です。
+teams.shift.scheduler.mail.disclaimer=これは自動的に生成したメールです。{0}で設定できます
+</content>
+  </xwikidoc>
