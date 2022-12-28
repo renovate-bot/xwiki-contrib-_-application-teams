@@ -1,4 +1,4 @@
-<?xml version="1.1" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <!--
  * See the NOTICE file distributed with this work for additional
@@ -74,4 +74,4 @@ teams.shift.scheduler.event.title=シフト - {0}
 teams.shift.scheduler.mail.content={0}の順番です。
 teams.shift.scheduler.mail.disclaimer=これは自動的に生成したメールです。{0}で設定できます
 </content>
-  </xwikidoc>
+</xwikidoc>
