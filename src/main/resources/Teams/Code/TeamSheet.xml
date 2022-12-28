@@ -39,12 +39,12 @@
   <content>{{box cssClass="floatinginfobox"}}{{toc/}}{{/box}}
 
 {{velocity}}
-#set($class = $doc.getObject('Teams.Code.TeamClass').xWikiClass)
+#if ($xcontext.action == 'edit' || $doc.getValue('news') != '')
 = $doc.displayPrettyName('news', false, false)
 
 $doc.news
 
-#set($class = $doc.getObject('Teams.Code.TeamClass').xWikiClass)
+#end
 = $doc.displayPrettyName('job', false, false)
 
 $doc.job
