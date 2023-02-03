@@ -40,7 +40,7 @@
 #if ($hasEdit &amp;&amp; $request.date)
   #set($date = $datetool.toDate("dd/MM/yyyy HH:mm", $request.date))
   #set($pageName = "${doc.space}.${datetool.format('dd MMMM yyyy', $date, $services.localization.toLocale('fr_FR'))}")
-  #set($url = $xwiki.getURL($pageName, 'edit', "template=Teams.Code.MeetingTemplate&amp;parent=${doc}&amp;date=${escapetool.url($request.date)}"))
+  #set($url = $xwiki.getURL($pageName, 'edit', "template=Teams.Code.MeetingTemplate&amp;parent=${escapetool.url($doc.fullName)}&amp;date=${escapetool.url($request.date)}"))
   $response.sendRedirect($url)
 #end
 {{/velocity}}
