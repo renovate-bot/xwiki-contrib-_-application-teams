@@ -51,14 +51,6 @@
       <version>${platform.version}</version>
       <scope>runtime</scope>
     </dependency>
-    <dependency>
-      <groupId>org.xwiki.contrib</groupId>
-      <artifactId>application-mocca-calendar-ui</artifactId>
-      <type>xar</type>
-      <version>2.8</version>
-      <scope>runtime</scope>
-      <optional>true</optional>
-    </dependency>
   </dependencies>
   <developers>
     <developer>
