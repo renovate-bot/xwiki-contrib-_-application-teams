@@ -38,7 +38,7 @@
   <hidden>true</hidden>
   <content>teams.name=팀
 teams.home.create.success={0} 팀이 생성되었습니다
-teams.home.create.alreadyExist={0} 팀이 이미 존재합니다.
+teams.home.create.alreadyExist={0} 팀이 이미 존재합니다
 teams.home.teamName=팀 이름
 teams.home.create=만들다
 teams.table.doc.title=팀
@@ -62,16 +62,16 @@ teams.meeting.table.doc.name=회의 기록
 teams.meeting.table.date=날짜
 teams.meeting.table._actions=행위
 teams.meeting.create.title=회의 기록 ''{0}
-teams.meeting.pageName=역이 저장되었지만, 일부 새롭게 실패한 검사가 있습니다: 일치하지 않는 마침표(.)
+teams.meeting.pageName=회의 기록
 teams.meeting.title={0}의 회의 기록
-Teams.Code.MeetingClass_date=삭제 진행 중...
-Teams.Code.MeetingClass_agenda=삭제 진행 중...
-Teams.Code.MeetingClass_record=삭제 진행 중...
-Teams.Code.MeetingClass_participants=삭제 진행 중...
-Teams.Code.MeetingClass_absents=삭제 진행 중...
-teams.shift.scheduler.event.pageName=삭제 진행 중...
-teams.shift.scheduler.event.title=삭제 진행 중...
-teams.shift.scheduler.mail.content=삭제 진행 중...
-teams.shift.scheduler.mail.disclaimer=삭제 진행 중...
+Teams.Code.MeetingClass_date=날짜
+Teams.Code.MeetingClass_agenda=의제
+Teams.Code.MeetingClass_record=기록
+Teams.Code.MeetingClass_participants=참가자들
+Teams.Code.MeetingClass_absents=결석한
+teams.shift.scheduler.event.pageName=Shift-{0}-{1}
+teams.shift.scheduler.event.title=교대 - {0}
+teams.shift.scheduler.mail.content={0}님 차례입니다.
+teams.shift.scheduler.mail.disclaimer=이것은 {0}에서 구성할 수 있는 자동으로 생성된 메일입니다
 </content>
   </xwikidoc>
