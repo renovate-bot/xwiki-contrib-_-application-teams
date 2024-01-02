@@ -1,0 +1,77 @@
+<?xml version="1.1" encoding="UTF-8"?>
+
+<!--
+ * See the NOTICE file distributed with this work for additional
+ * information regarding copyright ownership.
+ *
+ * This is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 2.1 of
+ * the License, or (at your option) any later version.
+ *
+ * This software is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this software; if not, write to the Free
+ * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+ * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
+-->
+
+<xwikidoc version="1.2" reference="Teams.Code.Translations" locale="ko">
+  <web>Teams.Code</web>
+  <name>Translations</name>
+  <language>ko</language>
+  <defaultLanguage>en</defaultLanguage>
+  <translation>1</translation>
+  <creator>xwiki:XWiki.Admin</creator>
+  <parent>WebHome</parent>
+  <author>xwiki:XWiki.Admin</author>
+  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
+  <version>1.1</version>
+  <title/>
+  <comment/>
+  <minorEdit>false</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>true</hidden>
+  <content>teams.name=팀
+teams.home.create.success={0} 팀이 생성되었습니다
+teams.home.create.alreadyExist={0} 팀이 이미 존재합니다.
+teams.home.teamName=팀 이름
+teams.home.create=만들다
+teams.table.doc.title=팀
+teams.table._actions=행위
+teams.team.sheet.records=회의 기록
+teams.team.sheet.recordsLink.label=회의 기록 페이지
+teams.team.sheet.members=팀 멤버
+teams.team.sheet.members.editLink=팀 구성원 수정
+teams.team.sheet.shifts=영속성
+teams.team.sheet.email=팀과 소통하는 데 사용할 이메일 주소
+Teams.Code.TeamClass_content=기타
+Teams.Code.TeamClass_news=소식
+Teams.Code.TeamClass_leader=지도자
+Teams.Code.TeamClass_email=이메일
+Teams.Code.TeamClass_job=직업
+Teams.Code.TeamClass_need=요구사항
+Teams.Code.TeamClass_shiftUsers=교대 멤버
+Teams.Code.TeamClass_shiftCalendar=달력
+### Missing: teams.meeting.table.empty=
+teams.meeting.table.doc.name=회의 기록
+teams.meeting.table.date=날짜
+teams.meeting.table._actions=행위
+teams.meeting.create.title=회의 기록 ''{0}
+teams.meeting.pageName=역이 저장되었지만, 일부 새롭게 실패한 검사가 있습니다: 일치하지 않는 마침표(.)
+teams.meeting.title={0}의 회의 기록
+Teams.Code.MeetingClass_date=삭제 진행 중...
+Teams.Code.MeetingClass_agenda=삭제 진행 중...
+Teams.Code.MeetingClass_record=삭제 진행 중...
+Teams.Code.MeetingClass_participants=삭제 진행 중...
+Teams.Code.MeetingClass_absents=삭제 진행 중...
+teams.shift.scheduler.event.pageName=삭제 진행 중...
+teams.shift.scheduler.event.title=삭제 진행 중...
+teams.shift.scheduler.mail.content=삭제 진행 중...
+teams.shift.scheduler.mail.disclaimer=삭제 진행 중...
+</content>
+  </xwikidoc>
