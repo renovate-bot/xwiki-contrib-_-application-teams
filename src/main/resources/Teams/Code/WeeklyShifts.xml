@@ -171,7 +171,10 @@
       currentWeekEvent = xwiki.getDocument(eventReference)
       currentWeekEventXDocument = currentWeekEvent.doc
 
-      currentWeekEvent.setTitle(services.localization.render('teams.shift.scheduler.event.title', [xwiki.getPlainUserName(userReference)]))
+      var title = services.localization.render('teams.shift.scheduler.event.title', [xwiki.getPlainUserName(userReference)])
+      if (!currentWeekEvent.title.startsWith(title)) {
+        currentWeekEvent.setTitle(services.localization.render('teams.shift.scheduler.event.title', [xwiki.getPlainUserName(userReference)]))
+      }
       currentWeekEventXDocument.setCreatorReference(userReference)
       currentWeekEventXDocument.setAuthorReference(userReference)
       currentWeekEventXDocument.setContentAuthorReference(userReference)
@@ -278,7 +281,7 @@
             mailContent += services.localization.render('teams.shift.scheduler.mail.disclaimer', [teamDocument.externalURL])
 
             message = services.mailsender.createMessage(teamMail, teamMail, mailSubject)
-            message.addPart('text/plain', mailContent)
+            message.addPart('text/plain; charset="UTF-8"', mailContent)
 
             services.mailsender.send(message)
           }

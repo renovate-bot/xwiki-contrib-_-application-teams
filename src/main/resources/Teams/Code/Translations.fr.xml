@@ -35,7 +35,7 @@
   <comment/>
   <minorEdit>false</minorEdit>
   <syntaxId>plain/1.0</syntaxId>
-  <hidden>false</hidden>
+  <hidden>true</hidden>
   <content>teams.name=Équipes
 
 teams.home.create.success=L''équipe {0} a été créée
@@ -69,10 +69,11 @@ teams.meeting.table._actions=Actions
 teams.meeting.create.title=Compte rendu '{0}
 teams.meeting.pageName=Comptes Rendus
 teams.meeting.title=Compte rendu du {0}
+teams.meeting.padLink=Pad collaboratif
 
 Teams.Code.MeetingClass_date=Date
 Teams.Code.MeetingClass_agenda=Ordre du jour
-Teams.Code.MeetingClass_record=Compte rendu
+Teams.Code.MeetingClass_content=Compte rendu
 Teams.Code.MeetingClass_participants=Présents
 Teams.Code.MeetingClass_absents=Absents
 

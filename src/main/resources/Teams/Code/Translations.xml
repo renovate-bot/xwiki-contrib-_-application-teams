@@ -69,10 +69,11 @@ teams.meeting.table._actions=Actions
 teams.meeting.create.title=Meeting Record '{0}
 teams.meeting.pageName=Meeting Records
 teams.meeting.title=Meeting record for {0}
+teams.meeting.padLink=Collaboration pad
 
 Teams.Code.MeetingClass_date=Date
 Teams.Code.MeetingClass_agenda=Agenda
-Teams.Code.MeetingClass_record=Record
+Teams.Code.MeetingClass_content=Record
 Teams.Code.MeetingClass_participants=Participants
 Teams.Code.MeetingClass_absents=Absents
 
