@@ -35,7 +35,7 @@
   <comment/>
   <minorEdit>false</minorEdit>
   <syntaxId>xwiki/2.1</syntaxId>
-  <hidden>false</hidden>
+  <hidden>true</hidden>
   <content>{{box cssClass="floatinginfobox"}}{{toc/}}{{/box}}
 
 {{velocity}}
@@ -82,17 +82,21 @@ $doc.get('content')
 #end
 
 #if ($xcontext.action == 'view')
-#if ("$!{doc.getValue('shiftUsers')}" != '')
-  = $services.localization.render('teams.team.sheet.shifts')
+  #if ("$!{doc.getValue('shiftUsers')}" != '')
+    = $services.localization.render('teams.team.sheet.shifts')
 
-  ; $doc.displayPrettyName('shiftUsers', false, false):
-  : $doc.shiftUsers
-#end
+    ; $doc.displayPrettyName('shiftUsers', false, false):
+    : $doc.shiftUsers
+    ; $doc.displayPrettyName('shiftCycles', false, false):
+    : $doc.shiftCycles
+  #end
 #else
   = $services.localization.render('teams.team.sheet.shifts')
 
   ; $doc.displayPrettyName('shiftUsers', false, false):
   : $doc.shiftUsers
+  ; $doc.displayPrettyName('shiftCycles', false, false):
+  : $doc.shiftCycles
 #end
 #if ($xcontext.action == 'view')
   #set($shiftCalendar = $doc.getValue('shiftCalendar'))

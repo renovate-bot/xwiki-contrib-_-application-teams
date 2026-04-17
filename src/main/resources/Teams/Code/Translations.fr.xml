@@ -60,6 +60,7 @@ Teams.Code.TeamClass_job=Rôle
 Teams.Code.TeamClass_need=Besoins
 Teams.Code.TeamClass_shiftUsers=Membres de permanence
 Teams.Code.TeamClass_shiftCalendar=Calendrier
+Teams.Code.TeamClass_shiftCycles=Cycles planifiés
 
 teams.meeting.table.empty=
 teams.meeting.table.doc.name=Compte rendu

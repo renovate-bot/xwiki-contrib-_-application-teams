@@ -227,6 +227,11 @@
       if (!users.isEmpty()) {
         events = []
 
+        cycles = teamDocument.getValue('shiftCycles');
+        if (!cycles || cycles &lt; 1) {
+          cycles = 1
+        }
+
         calendar = teamDocument.getValue('shiftCalendar')
         if (calendar) {
           calendarDocument = xwiki.getDocument(calendar)
@@ -247,16 +252,17 @@
             }
           }
 
-          // Create missing events
+          // Create missing events and take into account the requested number of cycle to add
+          for (int c = 0; c &lt; cycles; ++c) {
+            for (int i = currentUserIndex; i &lt; users.size(); ++i) {
+              user = users.get(i)
+              newEvent(services.model.resolveDocument(user))
+            }
 
-          for (int i = currentUserIndex; i &lt; users.size(); ++i) {
-            user = users.get(i)
-            newEvent(services.model.resolveDocument(user))
-          }
-
-          for (int i = 0; i &lt; currentUserIndex; ++i) {
-            user = users.get(i)
-            newEvent(services.model.resolveDocument(user))
+            for (int i = 0; i &lt; currentUserIndex; ++i) {
+              user = users.get(i)
+              newEvent(services.model.resolveDocument(user))
+            }
           }
         }
 

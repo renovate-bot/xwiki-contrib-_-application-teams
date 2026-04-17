@@ -74,4 +74,4 @@ teams.shift.scheduler.event.title=교대 - {0}
 teams.shift.scheduler.mail.content={0}님 차례입니다.
 teams.shift.scheduler.mail.disclaimer=이것은 {0}에서 구성할 수 있는 자동으로 생성된 메일입니다
 </content>
-  </xwikidoc>
+</xwikidoc>
