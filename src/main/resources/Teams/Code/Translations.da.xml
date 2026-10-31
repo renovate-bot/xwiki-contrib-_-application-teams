@@ -1,0 +1,79 @@
+<?xml version="1.1" encoding="UTF-8"?>
+
+<!--
+ * See the NOTICE file distributed with this work for additional
+ * information regarding copyright ownership.
+ *
+ * This is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 2.1 of
+ * the License, or (at your option) any later version.
+ *
+ * This software is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this software; if not, write to the Free
+ * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+ * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
+-->
+
+<xwikidoc version="1.2" reference="Teams.Code.Translations" locale="da">
+  <web>Teams.Code</web>
+  <name>Translations</name>
+  <language>da</language>
+  <defaultLanguage>en</defaultLanguage>
+  <translation>1</translation>
+  <creator>xwiki:XWiki.Admin</creator>
+  <parent>WebHome</parent>
+  <author>xwiki:XWiki.Admin</author>
+  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
+  <version>1.1</version>
+  <title/>
+  <comment/>
+  <minorEdit>false</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>true</hidden>
+  <content>### Missing: teams.name=
+### Missing: teams.home.create.success=
+### Missing: teams.home.create.alreadyExist=
+### Missing: teams.home.teamName=
+### Missing: teams.home.create=
+### Missing: teams.table.doc.title=
+### Missing: teams.table._actions=
+### Missing: teams.team.sheet.records=
+### Missing: teams.team.sheet.recordsLink.label=
+### Missing: teams.team.sheet.members=
+### Missing: teams.team.sheet.members.editLink=
+### Missing: teams.team.sheet.shifts=
+### Missing: teams.team.sheet.email=
+### Missing: Teams.Code.TeamClass_content=
+### Missing: Teams.Code.TeamClass_news=
+### Missing: Teams.Code.TeamClass_leader=
+### Missing: Teams.Code.TeamClass_email=
+### Missing: Teams.Code.TeamClass_job=
+### Missing: Teams.Code.TeamClass_need=
+### Missing: Teams.Code.TeamClass_shiftUsers=
+### Missing: Teams.Code.TeamClass_shiftCalendar=
+### Missing: Teams.Code.TeamClass_shiftCycles=
+### Missing: teams.meeting.table.empty=
+### Missing: teams.meeting.table.doc.name=
+### Missing: teams.meeting.table.date=
+### Missing: teams.meeting.table._actions=
+### Missing: teams.meeting.create.title=
+### Missing: teams.meeting.pageName=
+### Missing: teams.meeting.title=
+### Missing: teams.meeting.padLink=
+### Missing: Teams.Code.MeetingClass_date=
+### Missing: Teams.Code.MeetingClass_agenda=
+### Missing: Teams.Code.MeetingClass_content=
+### Missing: Teams.Code.MeetingClass_participants=
+### Missing: Teams.Code.MeetingClass_absents=
+### Missing: teams.shift.scheduler.event.pageName=
+### Missing: teams.shift.scheduler.event.title=
+### Missing: teams.shift.scheduler.mail.content=
+### Missing: teams.shift.scheduler.mail.disclaimer=
+</content>
+</xwikidoc>
