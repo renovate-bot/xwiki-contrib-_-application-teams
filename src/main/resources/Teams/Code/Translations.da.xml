@@ -1,0 +1,79 @@
+<?xml version="1.1" encoding="UTF-8"?>
+
+<!--
+ * See the NOTICE file distributed with this work for additional
+ * information regarding copyright ownership.
+ *
+ * This is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 2.1 of
+ * the License, or (at your option) any later version.
+ *
+ * This software is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this software; if not, write to the Free
+ * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+ * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
+-->
+
+<xwikidoc version="1.2" reference="Teams.Code.Translations" locale="da">
+  <web>Teams.Code</web>
+  <name>Translations</name>
+  <language>da</language>
+  <defaultLanguage>en</defaultLanguage>
+  <translation>1</translation>
+  <creator>xwiki:XWiki.Admin</creator>
+  <parent>WebHome</parent>
+  <author>xwiki:XWiki.Admin</author>
+  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
+  <version>1.1</version>
+  <title/>
+  <comment/>
+  <minorEdit>false</minorEdit>
+  <syntaxId>plain/1.0</syntaxId>
+  <hidden>true</hidden>
+  <content>teams.name=Teams
+teams.home.create.success=Teamet {0} er oprettet
+teams.home.create.alreadyExist=Teamet {0} findes allerede
+teams.home.teamName=Teamnavn
+teams.home.create=Opret
+teams.table.doc.title=Team
+teams.table._actions=Handlinger
+teams.team.sheet.records=Mødereferater
+teams.team.sheet.recordsLink.label=Siden Mødereferater
+teams.team.sheet.members=Teammedlemmer
+teams.team.sheet.members.editLink=Rediger teammedlemmer
+teams.team.sheet.shifts=Vagter
+teams.team.sheet.email=Mailadresse til kommunikation med teamet
+Teams.Code.TeamClass_content=Diverse
+Teams.Code.TeamClass_news=Nyheder
+Teams.Code.TeamClass_leader=Leder
+Teams.Code.TeamClass_email=Mail
+Teams.Code.TeamClass_job=Opgave
+Teams.Code.TeamClass_need=Behov
+Teams.Code.TeamClass_shiftUsers=Vagtmedlemmer
+Teams.Code.TeamClass_shiftCalendar=Kalender
+Teams.Code.TeamClass_shiftCycles=Planlagte rotationer
+### Missing: teams.meeting.table.empty=
+teams.meeting.table.doc.name=Mødereferat
+teams.meeting.table.date=Dato
+teams.meeting.table._actions=Handlinger
+teams.meeting.create.title=Mødereferat {0}
+teams.meeting.pageName=Mødereferater
+teams.meeting.title=Mødereferat for {0}
+teams.meeting.padLink=Fælles notesblok
+Teams.Code.MeetingClass_date=Dato
+Teams.Code.MeetingClass_agenda=Dagsorden
+Teams.Code.MeetingClass_content=Referat
+Teams.Code.MeetingClass_participants=Deltagere
+Teams.Code.MeetingClass_absents=Fraværende
+teams.shift.scheduler.event.pageName=Vagt-{0}-{1}
+teams.shift.scheduler.event.title=Vagt - {0}
+teams.shift.scheduler.mail.content=Det er nu {0}, der har tur.
+teams.shift.scheduler.mail.disclaimer=Dette er en automatisk genereret mail, som kan indstilles på {0}
+</content>
+</xwikidoc>
